@@ -1,0 +1,150 @@
+:root {
+--green: #149735;
+--green-dark: #0e6813;
+--white: #ffffff;
+--ink: #0f172a;
+}
+
+
+body {
+margin: 0;
+font-family: 'Poppins', sans-serif;
+background-color: #f8feff;
+}
+
+
+/* Navigation Bar */
+nav {
+background-color: var(--green);
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 30px 30px;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.nav-brand {
+color: var(--white);
+font-weight: 700;
+font-size: 2.2rem;
+text-decoration: none;
+}
+
+
+.nav-links {
+display: flex;
+gap: 65px;
+list-style: none;
+margin: 0;
+padding: 0;
+font-size: 2.2rem;
+}
+
+
+.nav-links a {
+color: var(--white);
+text-decoration: none;
+font-weight: 600;
+transition: color 0.3s, transform 0.2s;
+}
+
+
+.nav-links a:hover {
+color: var(--ink);
+transform: scale(1.05);
+}
+/* Unique CSS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppings" serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient();
+    color: rgb(0, 0, 0);
+    background-image: url();
+    background-size: cover;         
+    background-position: center;    
+    background-repeat: no-repeat;   
+    height: 100vh;                  
+}
+
+.container {
+    margin: 0 15px;
+}
+
+.form-box {
+    width: 100%;
+    max-width: 450px;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+    display: none;
+    color: black;
+}
+
+.form-box-text {
+    font-size: 16px;
+    margin-bottom: 8px;
+} 
+
+.form-box.active {
+    display: block;
+}
+
+h2 {
+    font-size: 34px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+input, 
+select {
+    width: 100%;
+    padding: 12px;
+    background: #b8babb;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: rgb(126, 120, 120);
+    margin-bottom: 20px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: rgb(19, 160, 42);
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 20px;
+    transition: 05.s;
+}
+
+p {
+    font-size: 14.5px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+p a {
+    color: rgb(0, 153, 255);
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
