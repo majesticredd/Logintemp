@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/login.css" />
+    <!--Link to css-->
+    <title>Login</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-box active" id="login-form">
+        <!--Login page-->
+        <form action="/login" method="POST" onsubmit="return validateLogin(event)">
+          <h2>Welcome back!</h2>
+          <!--Placeholders-->
+          <input id="login-email" type="email" name="email" placeholder="Email" required autocomplete="email"/>
+          <span class="error" id="login-email-error" aria-live="polite"></span>
+          <input
+            id="login-password"
+            type="password"
+            name="password"
+            placeholder="Password"
+            required
+            autocomplete="current-password"
+          />
+          <span class="error" id="login-password-error" aria-live="polite"></span>
+          <button type="submit" name="login">Login</button>
+          <!-- button to log in-->
+          <p>
+            Don't have an account?
+            <a href="#" onclick="showForm('register-form')">SignUp</a>
+          </p>
+          <!--Link to sign up page-->
+        </form>
+      </div>
+
+      <div class="form-box" id="register-form">
+        <!--Sign up page-->
+        <form action="/register" method="POST" onsubmit="return validateRegister(event)">
+          <h2>Sign up!</h2>
+          <div class="form-box-text">
+            <input
+            id="register-firstname"
+            type="text"
+            name="firstname"
+            placeholder="Firstname"
+            required
+            autocomplete="given-name"
+            />
+          </div>
+          <span class="error" id="register-firstname-error" aria-live="polite"></span>
+          <input id="register-surname" type="text" name="surname" placeholder="Surname" required autocomplete="family-name" />
+          <span class="error" id="register-surname-error" aria-live="polite"></span>
+          <input id="register-email" type="email" name="email" placeholder="Email" required autocomplete="email" />
+          <span class="error" id="register-email-error" aria-live="polite"></span>
+          <input
+            id="register-password"
+            type="password"
+            name="password"
+            placeholder="Password"
+            required
+            autocomplete="new-password"
+          />
+          <span class="error" id="register-password-error" aria-live="polite"></span>
+          <select id="register-role" name="role" required>
+            <option value="">--select role--</option>
+            <!--Giving the user role options-->
+            <option value="student">User</option>
+            <option value="tutor">Admin</option>
+          </select>
+          <span class="error" id="register-role-error" aria-live="polite"></span>
+          <button type="submit" name="signup">Sign up</button>
+          <!--button to sign up-->
+          <p>
+            Already have an account?
+            <a href="#" onclick="showForm('login-form')">Login</a>
+          </p>
+          <!--Link to login page-->
+        </form>
+      </div>
+    </div>
+
+    <script src="/static/login.js"></script>
+    <!--Tagging the javascript-->
+  </body>
+</html>
